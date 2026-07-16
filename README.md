@@ -1,12 +1,10 @@
-# Ali_Lien ASIC Firmware
+## Official website
 
-Custom firmware for JasMiner X16-Q and JasMiner X16-QE.
-
-Official website:
+International website:  
 https://firmware.alilienasic.workers.dev
 
-Download, installation guide, FAQ and support:
-https://firmware.alilienasic.workers.dev
+Russia mirror:  
+https://alilienasic.ru
 
-Telegram support:
-https://t.me/Ali_Lien
+Firmware download:  
+https://github.com/igrock23-byte/alilien-firmware/releases
