@@ -14,10 +14,10 @@ from PIL import Image, ImageDraw, ImageFont
 # =========================
 
 COINS = {
-    "BTC": "bitcoin",
-    "ETH": "ethereum",
-    "SOL": "solana",
-    "ETHW": "ethereumpow",
+    "BTC": ["bitcoin"],
+    "ETH": ["ethereum"],
+    "SOL": ["solana"],
+    "ETHW": ["ethereumpow", "ethereum-pow-iou"],
 }
 
 FX_CODES = ["USD", "EUR", "CNY"]
@@ -67,24 +67,43 @@ def format_rub(value: float) -> str:
 # =========================
 
 def fetch_crypto_prices() -> dict:
-    ids = ",".join(COINS.values())
+    all_ids = []
+    for ids in COINS.values():
+        all_ids.extend(ids)
+
     url = "https://api.coingecko.com/api/v3/simple/price"
     params = {
-        "ids": ids,
+        "ids": ",".join(all_ids),
         "vs_currencies": "usd",
         "include_24hr_change": "true",
     }
+
     r = requests.get(url, params=params, timeout=30)
     r.raise_for_status()
     raw = r.json()
 
     result = {}
-    for ticker, coin_id in COINS.items():
-        item = raw.get(coin_id, {})
-        result[ticker] = {
-            "price": item.get("usd"),
-            "change_24h": item.get("usd_24h_change"),
-        }
+
+    for ticker, ids in COINS.items():
+        selected = None
+
+        for coin_id in ids:
+            item = raw.get(coin_id)
+            if item and item.get("usd") is not None:
+                selected = item
+                break
+
+        if selected:
+            result[ticker] = {
+                "price": selected.get("usd"),
+                "change_24h": selected.get("usd_24h_change"),
+            }
+        else:
+            result[ticker] = {
+                "price": None,
+                "change_24h": None,
+            }
+
     return result
 
 
