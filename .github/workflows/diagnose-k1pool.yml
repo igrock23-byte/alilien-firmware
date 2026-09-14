@@ -1,0 +1,19 @@
+name: Diagnose K1Pool API
+on:
+  push:
+    branches: [ethw-widget-v01]
+  workflow_dispatch:
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch miner JSON
+        run: |
+          set -x
+          curl -fsSL --compressed -A 'Mozilla/5.0 AliLienWidget/0.2' 'https://k1pool.com/api/miner/ethw/KrLbqNALqUccLmevJwUK4bf4D5rSv1r3MRi' | tee /tmp/miner.json
+          echo
+          python3 -m json.tool /tmp/miner.json || true
+      - name: Fetch ETHW pool page hints
+        run: |
+          curl -fsSL --compressed -A 'Mozilla/5.0 AliLienWidget/0.2' 'https://k1pool.com/pool/ethw' -o /tmp/pool.html
+          grep -Eoi '.{0,100}(epoch|dag|price|revenue).{0,180}' /tmp/pool.html | head -80 || true
