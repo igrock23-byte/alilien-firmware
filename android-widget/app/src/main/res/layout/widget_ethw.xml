@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@drawable/widget_bg" android:padding="12dp">
  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
-  <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ALI_LIEN // LV-426" android:textColor="#BCE9B3" android:textStyle="bold" android:textSize="14sp" android:letterSpacing="0.08"/>
-  <TextView android:id="@+id/settings" android:layout_width="36dp" android:layout_height="32dp" android:gravity="center" android:text="⚙" android:textColor="#759A75" android:textSize="18sp"/>
-  <TextView android:id="@+id/refresh" android:layout_width="36dp" android:layout_height="32dp" android:gravity="center" android:text="↻" android:textColor="#BCE9B3" android:textSize="22sp"/>
+  <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ALI_LIEN // LV-426" android:textColor="#D2F4C8" android:textStyle="bold" android:textSize="14sp" android:letterSpacing="0.10"/>
+  <TextView android:id="@+id/settings" android:layout_width="36dp" android:layout_height="32dp" android:gravity="center" android:text="⚙" android:textColor="#789477" android:textSize="18sp"/>
+  <TextView android:id="@+id/refresh" android:layout_width="36dp" android:layout_height="32dp" android:gravity="center" android:text="↻" android:textColor="#C7F0BC" android:textSize="22sp"/>
  </LinearLayout>
- <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="╱╲╱╲  XENOMORPH NETWORK TERMINAL  ╱╲╱╲" android:textColor="#48634D" android:textSize="8sp" android:gravity="center"/>
- <TextView android:id="@+id/hashrate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="K1POOL  --" android:textColor="#E0F7D8" android:textStyle="bold" android:textSize="27sp"/>
- <TextView android:id="@+id/averages" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="3h --  •  24h --" android:textColor="#8EAA8D" android:textSize="12sp"/>
- <TextView android:id="@+id/price" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ETHW  $--" android:textColor="#BCE9B3" android:textSize="16sp" android:paddingTop="6dp"/>
- <TextView android:id="@+id/income" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="-- ETHW/day  •  $--/day  •  $--/month" android:textColor="#D8EDD3" android:textSize="13sp"/>
- <TextView android:id="@+id/epoch" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="EPOCH --  •  DAG -- GB  •  NEXT --" android:textColor="#8EAA8D" android:textSize="11sp" android:paddingTop="7dp"/>
- <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="AWAITING SIGNAL" android:textColor="#9DBD92" android:textStyle="bold" android:textSize="9sp" android:paddingTop="5dp"/>
- <TextView android:id="@+id/updated" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UPDATED --" android:textColor="#59705B" android:textSize="9sp"/>
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="╱╲╱╲  XENOMORPH // NOSTROMO DATA LINK  ╱╲╱╲" android:textColor="#4C694E" android:textSize="8sp" android:gravity="center"/>
+ <TextView android:id="@+id/hashrate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="K1POOL  --" android:textColor="#E5FFDD" android:textStyle="bold" android:textSize="27sp" android:paddingTop="3dp"/>
+ <TextView android:id="@+id/averages" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="30m CURRENT  •  3h --  •  24h --" android:textColor="#94AF91" android:textSize="11sp"/>
+ <TextView android:id="@+id/price" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ETHW  $--" android:textColor="#C5EFB9" android:textSize="16sp" android:paddingTop="6dp"/>
+ <TextView android:id="@+id/income" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="-- ETHW/day  •  $--/day  •  $--/month" android:textColor="#DCEFD7" android:textSize="13sp"/>
+ <TextView android:id="@+id/epoch" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="EPOCH --  •  DAG --  •  NEXT --" android:textColor="#91AA8E" android:textSize="11sp" android:paddingTop="7dp"/>
+ <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="AWAITING SIGNAL" android:textColor="#A9CE9E" android:textStyle="bold" android:textSize="9sp" android:paddingTop="5dp"/>
+ <TextView android:id="@+id/updated" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UPDATED --" android:textColor="#617962" android:textSize="9sp"/>
 </LinearLayout>
