@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@drawable/widget_bg" android:padding="12dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ALI_LIEN // ETHW" android:textColor="#A9D7A5" android:textStyle="bold" android:textSize="14sp"/>
+        <TextView android:id="@+id/refresh" android:layout_width="40dp" android:layout_height="32dp" android:gravity="center" android:text="↻" android:textColor="#A9D7A5" android:textSize="22sp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/hashrate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="K1POOL  -- GH/s" android:textColor="#D6F0D2" android:textStyle="bold" android:textSize="27sp"/>
+    <TextView android:id="@+id/averages" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="3h --  •  24h --" android:textColor="#829D83" android:textSize="12sp"/>
+    <TextView android:id="@+id/price" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ETHW  $--  (--%)" android:textColor="#A9D7A5" android:textSize="16sp" android:paddingTop="6dp"/>
+    <TextView android:id="@+id/income" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="-- ETHW/day  •  -- USDT/day  •  -- USDT/month" android:textColor="#D6F0D2" android:textSize="13sp"/>
+    <TextView android:id="@+id/epoch" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="EPOCH --  •  DAG -- GB  •  NEXT --" android:textColor="#829D83" android:textSize="11sp" android:paddingTop="7dp"/>
+    <TextView android:id="@+id/updated" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UPDATED --" android:textColor="#607463" android:textSize="9sp"/>
+</LinearLayout>
